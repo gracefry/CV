@@ -1,0 +1,46 @@
+html, body {
+    /* Page */
+    margin: 0;
+    padding: 0;
+
+    /* Font */
+    font-size: 10pt;
+    color: #000000;
+    font-family: Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    /* -moz-box-sizing: border-box; do i need this */
+}
+.page {
+    background-color: #eeeeee;
+    padding: 1cm;
+}
+
+.page-inner {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 4px 5px rgb(75 75 75 / 20%);
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: auto;
+}
+
+@media print {
+	.page {
+        /* Thanks to https://github.com/delight-im/HTML-Sheets-of-Paper/blob/gh-pages/css/sheets-of-paper.css */
+
+		width: initial !important;
+		min-height: initial !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		border: initial !important;
+		border-radius: initial !important;
+		background-color: #ffffff !important;
+		box-shadow: initial !important;
+
+		page-break-after: always;
+	}
+}
