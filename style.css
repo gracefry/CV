@@ -70,9 +70,10 @@ html, body {
         .two-panel > #left {
             flex: 0 0 50%;
         }
-#projects > .two-panel {
-    gap: 0.5cm;
-}
+
+    #projects > .two-panel {
+        gap: 0.3cm;
+    }
 
 h2 {
     margin-bottom: 0;
