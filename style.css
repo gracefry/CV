@@ -10,7 +10,7 @@ html, body {
     font-size: 10pt;
     font-weight: 400;
     color: #000000;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 * {
@@ -33,13 +33,10 @@ html, body {
     overflow-wrap: break-word;
 }
 
-.entry {
-    margin: 0.25cm 0;
-}
-
 .three-panel {
     display: flex;
     justify-content: space-between;
+    margin: 0.15cm 0;
 }
     .three-panel > #center {
         flex: 0 0 33.33%;
@@ -61,6 +58,9 @@ html, body {
 .two-panel {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 0.15cm 0;
+
 }
         .two-panel > #right {
             text-align: right;
@@ -70,16 +70,20 @@ html, body {
         .two-panel > #left {
             flex: 0 0 50%;
         }
+#projects > .two-panel {
+    gap: 0.5cm;
+}
 
 h2 {
     margin-bottom: 0;
+    color: var(--highlight);
 }
 
 ul {
     list-style-type: circle;
     padding: 0;
-    padding-left: 0.5cm;
     margin: 0;
+    margin-left: 0.5cm;
 }
 
 a {
@@ -87,6 +91,26 @@ a {
     color: var(--highlight);
 }
 
+hr {
+    margin: 0.05cm;
+}
+
+b {
+    font-weight: 600;
+}
+
+#icon {
+    color: var(--highlight);
+}
+
+span {
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    padding: 0 4px;
+    color: #aaa;
+    background-color: #eee;
+
+}
 @media print {
 	.page {
         /* Thanks to https://github.com/delight-im/HTML-Sheets-of-Paper/blob/gh-pages/css/sheets-of-paper.css */
