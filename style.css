@@ -8,6 +8,7 @@ html, body {
 
     /* Font */
     font-size: 10pt;
+    font-weight: 400;
     color: #000000;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -32,22 +33,54 @@ html, body {
     overflow-wrap: break-word;
 }
 
-.header {
+.entry {
+    margin: 0.25cm 0;
+}
+
+.three-panel {
     display: flex;
     justify-content: space-between;
 }
-    .header > #center {
-        flex: 2;
+    .three-panel > #center {
+        flex: 0 0 33.33%;
+        text-align: center;
     }
+        #center > h1 {
+            margin: 0;
+        }
 
-    .header > #right {
+    .three-panel > #right {
         text-align: right;
-        flex: 1;
+        flex: 0 0 33.33%;
     }
 
-    .header > #left {
-        flex: 1;
+    .three-panel > #left {
+        flex: 0 0 33.33%;
     }
+
+.two-panel {
+    display: flex;
+    justify-content: space-between;
+}
+        .two-panel > #right {
+            text-align: right;
+            flex: 0 0 50%;
+        }
+    
+        .two-panel > #left {
+            flex: 0 0 50%;
+        }
+
+h2 {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style-type: circle;
+    padding: 0;
+    padding-left: 0.5cm;
+    margin: 0;
+}
 
 a {
     text-decoration: none;
