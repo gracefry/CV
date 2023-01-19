@@ -25,16 +25,43 @@ body {
 
 .panel {
     display: flex;
+    flex-direction: column;
     flex: 1;
     margin: -1cm -1cm -1cm 1cm;
     background-color: #dddddd;
     box-shadow: inset 5px 0px 5px 0px #cccccc;
     animation: 0.5s ease-in fadeIn;
+    transition: opacity 500ms;
 }
+    .panel-content {
+        display: flex;
+        height: 100%;
+    }
 
     .panel.inactive {
         display: none;
     }
+
+    .panel-content iframe {
+        margin-left: 10px;
+        border: none;
+        flex: 1;
+    }
+
+    #close-panel {
+        border-radius: 50%;
+        background: transparent;
+        border: 0px;
+        align-self: flex-end;
+        margin: 10px;
+        aspect-ratio: 1 / 1;
+        padding: 0;
+    }
+
+        #close-panel > i {
+            color: #777777;
+            font-size: 24px;
+        }
 
 .page {
     flex: 1.5;

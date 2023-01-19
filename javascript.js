@@ -1,18 +1,9 @@
 const closeButton = document.querySelector(".close");
 const printButton = document.querySelector(".print");
 const panel = document.querySelector(".panel");
-// const header = document.getElementById("header");
-// const bsci = document.getElementById("bsci");
-// const med = document.getElementById("medicine");
-// const hs = document.getElementById("highschool");
-// const reception = document.getElementById("reception");
-// const syncs = document.getElementById("syncs");
-// const sign = document.getElementById("signsoc");
-// const pacman = document.getElementById("pacman");
-// const cv = document.getElementById("cv");
-// const monopoly = document.getElementById("monopoly");
-// const shiny = document.getElementById("shiny");
+const panelContent = document.querySelector(".panel-content");
 const selectables = document.querySelectorAll(".entry");
+const panelCloseButton = document.getElementById("close-panel");
 
 function hover(e) {
     this.style.cursor = "help";
@@ -26,7 +17,20 @@ function noHover(e) {
 
 function showPanel(e) {
     panel.classList.remove("inactive");
-    console.log(this);
+    panel.classList.remove("hidden");
+    if (panelContent.hasChildNodes()) {
+        panelContent.replaceChildren();
+    }
+    let panelFrame = document.createElement("iframe");
+    panelFrame.setAttribute("src", `/home/grace/repos/CV/pages/${this.id}.html`);
+    panelContent.appendChild(panelFrame);
+}
+
+function hidePanel(e) {
+    panel.classList.add("hidden");
+    setTimeout(() => {
+        panel.classList.add("inactive");
+    }, 500)
 }
 
 selectables.forEach(function (selectable) {
@@ -40,7 +44,9 @@ closeButton.addEventListener("click", () => {
     modal.classList.add("hidden");
     setTimeout(() => {
         modal.style.display = "none";
-    }, 500)
+    }, 510)
 })
+
+panelCloseButton.addEventListener("click", hidePanel);
 
 printButton.addEventListener("click", window.print)
