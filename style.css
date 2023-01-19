@@ -91,6 +91,11 @@ body {
     opacity: 0;
 }
 
+.hover {
+    cursor: help;
+    background-color: rgba(19, 138, 35, 0.05);
+}
+
 .modal {
     width: 21cm;
     padding: 0.25in 0.5in;

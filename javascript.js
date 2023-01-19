@@ -6,13 +6,11 @@ const selectables = document.querySelectorAll(".entry");
 const panelCloseButton = document.getElementById("close-panel");
 
 function hover(e) {
-    this.style.cursor = "help";
-    this.style.backgroundColor = "rgba(19, 138, 35, 0.05)"
+    this.classList.add("hover");
 }
 
 function noHover(e) {
-    this.style.removeProperty("cursor");
-    this.style.backgroundColor = "";
+    this.classList.remove("hover");
 }
 
 function showPanel(e) {
@@ -49,4 +47,10 @@ closeButton.addEventListener("click", () => {
 
 panelCloseButton.addEventListener("click", hidePanel);
 
-printButton.addEventListener("click", window.print)
+printButton.addEventListener("click", window.print);
+
+window.addEventListener("beforeprint", () => {
+    selectables.forEach(function (selectable) {
+         noHover;
+    });
+})
