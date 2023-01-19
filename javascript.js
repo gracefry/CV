@@ -22,7 +22,7 @@ function showPanel(e) {
         panelContent.replaceChildren();
     }
     let panelFrame = document.createElement("iframe");
-    panelFrame.setAttribute("src", `/home/grace/repos/CV/pages/${this.id}.html`);
+    panelFrame.setAttribute("src", `./pages/${this.id}.html`);
     panelContent.appendChild(panelFrame);
 }
 
