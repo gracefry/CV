@@ -4,8 +4,10 @@
 body {
     /* Page */
     margin: 0;
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh;
+    width: 100vw; */
+    display: flex;
+    justify-content: center;
 
     /* Font */
     font-size: 10pt;
@@ -19,20 +21,47 @@ body {
 
 * {
     box-sizing: border-box;
-    /* -moz-box-sizing: border-box; do i need this */
 }
 
+.panel {
+    display: flex;
+    flex: 1;
+    margin: -1cm -1cm -1cm 1cm;
+    background-color: #dddddd;
+    box-shadow: inset 5px 0px 5px 0px #cccccc;
+    animation: 0.5s ease-in fadeIn;
+}
+
+    .panel.inactive {
+        display: none;
+    }
+
 .page {
-    animation: ease-in-out 1.5s slideIn;
+    flex: 1.5;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes slideIn {
     0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 21cm;
+        opacity: 1;
+    }
+}
+
+.hidden {
     opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .modal {
@@ -49,11 +78,9 @@ body {
     align-items: center;
     justify-content: center;
     transition: opacity 500ms;
-}
 
-    .modal.hidden {
-        opacity: 0;
-    }
+    animation: 2s ease-out slideIn;
+}
     
     .modal-header {
         display: flex;
@@ -62,11 +89,15 @@ body {
         font-size: 16px;
         font-weight: 700;
         margin-bottom: 8px;
+
+        animation: 3s ease-in fadeIn;
         }
         
         .text {
         margin-bottom: 16px;
         font-size: 14px;
+
+        animation: 3s ease-in fadeIn;
         }
     
     .close-button {
@@ -85,6 +116,8 @@ body {
     .buttons {
         display: flex;
         gap: 8px;
+        
+        animation: 3s ease-in fadeIn;
     }
 
     button {
@@ -114,6 +147,8 @@ body {
     padding: 0.5in;
     margin: auto;
     overflow-wrap: break-word;
+
+    animation: 1.5s ease-in-out fadeIn;
 }
 
 .three-panel {
@@ -219,10 +254,19 @@ span {
 		background-color: #ffffff !important;
 		box-shadow: initial !important;
 
+        /* background-color: #ffffff !important;
+        color: #000000 !important;
+        box-shadow: 0 4px 5px rgb(75 75 75 / 20%) !important;
+        width: 21cm !important;
+        min-height: 29.7cm !important;
+        padding: 0.5in !important;
+        margin: auto !important;
+        overflow-wrap: break-word !important; */
+
 		page-break-after: always;
 	}
 
-    .modal {
+    .modal, .panel {
         display: none;
     }
 }

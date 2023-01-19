@@ -1,5 +1,6 @@
 const closeButton = document.querySelector(".close");
 const printButton = document.querySelector(".print");
+const panel = document.querySelector(".panel");
 // const header = document.getElementById("header");
 // const bsci = document.getElementById("bsci");
 // const med = document.getElementById("medicine");
@@ -24,7 +25,8 @@ function noHover(e) {
 }
 
 function showPanel(e) {
-    console.log(e.target.classList);
+    panel.classList.remove("inactive");
+    console.log(this);
 }
 
 selectables.forEach(function (selectable) {
