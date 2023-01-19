@@ -1,16 +1,20 @@
 :root {
     --highlight: rgb(19, 138, 35);
 }
-html, body {
+body {
     /* Page */
     margin: 0;
-    padding: 0;
+    height: 100vh;
+    width: 100vw;
 
     /* Font */
     font-size: 10pt;
     font-weight: 400;
     color: #000000;
     font-family: 'Source Sans Pro', sans-serif;
+
+    background-color: #eeeeee;
+    padding: 1cm;
 }
 
 * {
@@ -20,9 +24,6 @@ html, body {
 
 .page {
     animation: ease-in-out 1.5s slideIn;
-    background-color: #eeeeee;
-    padding: 1cm;
-    transition: all 0.5s ease-in;
 }
 
 @keyframes slideIn {
@@ -199,9 +200,14 @@ span {
     @page {
         size: A4;
         margin: 0;
+        padding: 0;
     }
 
-	.page {
+    body {
+        background-color: white;
+    }
+
+	.page-inner {
         /* Thanks to https://github.com/delight-im/HTML-Sheets-of-Paper/blob/gh-pages/css/sheets-of-paper.css */
 
 		width: initial !important;
