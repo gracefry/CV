@@ -14,9 +14,29 @@
     <script src="https://kit.fontawesome.com/26f3f67a65.js" crossorigin="anonymous"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- JS -->
+    <script src="javascript.js" defer></script>
 </head>
 <body>
     <div class="page">
+        <div class="modal">
+            <div class="container">
+                <div class="modal-header">
+                    Hi! Thanks for taking a look at my CV.
+                </div>
+                <div class="text">
+                    This CV was created using HTML, CSS and JavaScript. If you interact
+                    with different sections of the document, it will expand to
+                    show you more information! You can also print this webpage, and
+                    it should render as a well-proportioned A4 document without all
+                    of these other bells and whistles.
+                </div>
+                <div class="buttons">
+                    <button class="print" onClick="window.print()">Print</button>
+                    <button class="close" onClick>Close</button>
+                </div>
+            </div>
+        </div>
         <div class="page-inner">
             <div class="header">
                 <div class="three-panel">
@@ -60,12 +80,12 @@
                 <hr>
                 <div class="entry">
                     <div class="two-panel">
-                        <div id="left">
+                        <div class="left">
                             <strong>Bachelor of Science</strong>
                             <br>
                             <i>Computer Science, Software Development</i>
                         </div>
-                        <div id="right">
+                        <div class="right">
                             <strong>2022 — 2024</strong>
                             <br>
                             <i>University of Sydney</i>

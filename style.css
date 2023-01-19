@@ -22,6 +22,71 @@ html, body {
     padding: 1cm;
 }
 
+.modal {
+    width: 21cm;
+    padding: 0.25in 0.5in;
+    margin: auto;
+    margin-bottom: 1cm;
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 5px rgb(75 75 75 / 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+    .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        }
+        
+        .text {
+        margin-bottom: 16px;
+        font-size: 14px;
+        }
+    
+    .close-button {
+        background: #eee;
+        border-radius: 50%;
+        color: #888;
+        font-weight: 400;
+        font-size: 16px;
+        height: 24px;
+        width: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .buttons {
+        display: flex;
+        gap: 8px;
+    }
+
+    button {
+        padding: 8px 16px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+    button.print {
+        background: royalblue;
+        border: 1px solid royalblue;
+        color: white;
+    }
+    
+    button.close {
+        background: white;
+        border: 1px solid #ddd;
+        color: royalblue;
+    }
+
 .page-inner {
     background-color: #ffffff;
     color: #000000;
@@ -62,12 +127,12 @@ html, body {
     margin: 0.15cm 0;
 
 }
-        .two-panel > #right {
+        .two-panel > .right {
             text-align: right;
             flex: 0 0 50%;
         }
     
-        .two-panel > #left {
+        .two-panel > .left {
             flex: 0 0 50%;
         }
 
@@ -113,6 +178,11 @@ span {
 
 }
 @media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
 	.page {
         /* Thanks to https://github.com/delight-im/HTML-Sheets-of-Paper/blob/gh-pages/css/sheets-of-paper.css */
 
@@ -127,4 +197,8 @@ span {
 
 		page-break-after: always;
 	}
+
+    .modal {
+        display: none;
+    }
 }
