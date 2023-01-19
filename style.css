@@ -101,22 +101,23 @@ html, body {
 .three-panel {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0.15cm 0;
 }
-    .three-panel > #center {
+    .three-panel > .center {
         flex: 0 0 33.33%;
         text-align: center;
     }
-        #center > h1 {
+        .center > h1 {
             margin: 0;
         }
 
-    .three-panel > #right {
+    .three-panel > .right {
         text-align: right;
         flex: 0 0 33.33%;
     }
 
-    .three-panel > #left {
+    .three-panel > .left {
         flex: 0 0 33.33%;
     }
 
