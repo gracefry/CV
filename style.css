@@ -17,9 +17,21 @@ html, body {
     box-sizing: border-box;
     /* -moz-box-sizing: border-box; do i need this */
 }
+
 .page {
+    animation: ease-in-out 1.5s slideIn;
     background-color: #eeeeee;
     padding: 1cm;
+    transition: all 0.5s ease-in;
+}
+
+@keyframes slideIn {
+    0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .modal {
@@ -35,7 +47,12 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity 500ms;
 }
+
+    .modal.hidden {
+        opacity: 0;
+    }
     
     .modal-header {
         display: flex;
