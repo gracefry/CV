@@ -215,16 +215,16 @@ body {
 }
         .two-panel > .right {
             text-align: right;
-            flex: 0 0 50%;
+            flex: 0 0 49%;
         }
     
         .two-panel > .left {
-            flex: 0 0 50%;
+            flex: 0 0 49%;
         }
 
-    #projects > .two-panel {
-        gap: 0.3cm;
-    }
+        #projects > .two-panel > .right {
+            text-align: left;
+        }
 
 h2 {
     margin-bottom: 0;

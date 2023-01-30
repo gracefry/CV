@@ -19,3 +19,9 @@ body {
 * {
     box-sizing: border-box;
 }
+
+#profile-picture {
+    aspect-ratio: 1 / 1;
+    height: 250px;
+    border-radius: 50%;
+}
