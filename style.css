@@ -256,12 +256,11 @@ b {
 }
 
 span {
-    border: 1px solid #aaa;
+    border: 1px solid rgba(19, 138, 35, 0.75);
     border-radius: 6px;
     padding: 0 4px;
-    color: #aaa;
-    background-color: #eee;
-
+    color: rgba(19, 138, 35, 0.75);
+    background-color: rgba(19, 138, 35, 0.05);
 }
 @media print {
     @page {
