@@ -23,5 +23,20 @@ body {
 #profile-picture {
     aspect-ratio: 1 / 1;
     height: 250px;
+    width: 250px;
     border-radius: 50%;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+}
+
+i {
+    font-size: 30px;
+    color: green;
+    padding: 16px;
 }
