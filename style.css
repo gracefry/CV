@@ -262,6 +262,16 @@ span {
     color: rgba(19, 138, 35, 0.75);
     background-color: rgba(19, 138, 35, 0.05);
 }
+
+#obj {
+    display: flex;
+    justify-content: center;
+}
+
+#obj > span {
+    margin: 0 2.5px;
+}
+
 @media print {
     @page {
         size: A4;
