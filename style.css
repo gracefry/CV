@@ -332,6 +332,7 @@ span {
 
     .page-inner {
         width: 90vw;
+        padding: 0.25in;
     }
 
     .three-panel {
