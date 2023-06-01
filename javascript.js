@@ -16,6 +16,7 @@ function noHover(e) {
 function showPanel(e) {
     panel.classList.remove("inactive");
     panel.classList.remove("hidden");
+    panel.classList.add("active");
     if (panelContent.hasChildNodes()) {
         panelContent.replaceChildren();
     }
@@ -25,6 +26,7 @@ function showPanel(e) {
 }
 
 function hidePanel(e) {
+    panel.classList.remove("active");
     panel.classList.add("hidden");
     setTimeout(() => {
         panel.classList.add("inactive");
